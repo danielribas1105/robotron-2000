@@ -65,7 +65,68 @@ main {
     height: 80%;
 }
 
-/****************************** Equipamentos *****/
+
+/***** Estatísticas *****/
+
+.estatisticas {
+    flex-basis: 23%;
+    padding: 2em 2em 0;
+}
+
+.estatistica {
+    color: var(--main-branco);
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+}
+
+.estatistica-titulo {
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--main-cinza);
+    flex-basis: 40%;
+    text-transform: uppercase;
+    order: 1
+}
+
+.estatistica-valor {
+    flex-basis: 60%;
+    position: relative;
+    margin: 10px 0 0;
+    order: 2;
+    margin: -10px 0 0;
+}
+
+.estatistica-valor::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    border: 1px solid var(--main-cinza);
+    border-radius: 50%;
+}
+
+.estatistica-numero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+
+.estatistica:nth-child(2n) .estatistica-titulo {
+    order: 2;
+    text-align: right;
+}
+
+.estatistica:nth-child(2n) .estatistica-valor {
+    order: 1;
+    flex-basis: 35%;
+    margin: 10px 0 0;
+}
+
+/***** Equipamentos *****/
 
 .equipamentos {
     flex-basis: 32%;
@@ -148,67 +209,6 @@ main {
     color: var(--main-branco)
 }
 
-
-
-/****************************** Estatísticas *****/
-.estatisticas {
-    flex-basis: 23%;
-    padding: 2em 2em 0;
-}
-
-.estatistica {
-    color: var(--main-branco);
-    display: flex;
-    align-items: flex-start;
-    height: 25%;
-}
-
-.estatistica-titulo {
-    font-size: 1.5em;
-    border-bottom: 1px solid var(--main-cinza);
-    flex-basis: 40%;
-    text-transform: uppercase;
-    order: 1
-}
-
-.estatistica-valor {
-    flex-basis: 60%;
-    position: relative;
-    margin: 10px 0 0;
-    order: 2;
-    margin: -10px 0 0;
-}
-
-.estatistica-valor::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-    border: 1px solid var(--main-cinza);
-    border-radius: 50%;
-}
-
-.estatistica-numero {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-46%);
-    width: 100%;
-    line-height: 100%;
-    text-align: center;
-    font-size: 3em;
-    margin: 0;
-}
-
-.estatistica:nth-child(2n) .estatistica-titulo {
-    order: 2;
-    text-align: right;
-}
-
-.estatistica:nth-child(2n) .estatistica-valor {
-    order: 1;
-    flex-basis: 35%;
-    margin: 10px 0 0;
-}
-
 @media screen and (max-width: 1600px) {
     body { 
         font-size: 14px;
@@ -217,6 +217,12 @@ main {
         width: 90vw;
         height: 80vh;
         margin: 5vh auto;
+    }
+    .estatisticas {
+        flex-basis: 20%;
+    }
+    .montador-conteudo {
+        padding: 0.3em 10%;
     }
 }
 
